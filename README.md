@@ -31,7 +31,7 @@ GET is generally used to request a resource (data) from the server, PUT to modif
 **8. The combination of HTTP method and URI describes what a call to the API is doing.**  
 Ideally, the URIs used to interact with resources are structured in a certain way. Slide 8 provides some examples of how this might work. Instead of having separate URLs for each of the operations shown (say /users/all, /users/delete, /users/new, /users/change...*please* don’t do that), we can have just two URL paths and rely on the HTTP methods to communicate what it is that you’re trying to do. One benefit of this is having to maintain fewer URL paths, but it also makes it easy to understand what a given piece of code at the back or front end is intended to do. REST enforces a sort of contract between the back and front end through URI path and HTTP method choices.  
 
-**9. Informative Error Messages**  
+**9. Using informative error statuses**  
 Another aspect of a good REST API is sending an informative error status to the client-side when things go wrong and sending the correct success status when they go all right. There is a long list of HTTP status codes, and sometimes figuring out which to use is a bit of an art, but the community of REST API builders has come to a consenus on a lot of common scenarios. For example, if we’re requesting a JSON object with user 22’s information and can’t find that user, we should send back a 404 error (just like when a web page can’t be found).  
 
 **10. [Django REST Framework example]**  
